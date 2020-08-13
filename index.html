@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>
+Solving Complex Dexterous Manipulation Tasks With Trajectory Optimisation and Reinforcement Learning
+</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function changeResults(evt, env_id) {
+	var i, x, tablinks, vids;
+	x = document.getElementsByClassName("result_container");
+	for (i=0; i<x.length; i++) {
+		x[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("results_bar_item");
+	for (i=0; i<tablinks.length; i++) {
+		tablinks[i].style.backgroundColor = "#F2F1F0";
+	}
+	document.getElementById(env_id).style.display = "block";
+	evt.currentTarget.style.backgroundColor = "#4d99f0";
+	vids = document.getElementsByClassName("result_vid");
+	for (i=0; i<vids.length; i++) {
+		vids[i].pause()
+		vids[i].currentTime = 0;
+		vids[i].load();
+	}
+}
+</script>
+</head>
+
+<body>
+
+<div class="cover">
+
+<div class="main_title">
+Solving Complex Dexterous Manipulation Tasks With Trajectory Optimisation and Reinforcement Learning
+<br/><br/>
+<div class="authors">
+Henry Charlesworth and Giovanni Montana
+<br/><br/>
+<button class="button button2">Paper (arXiv)</button>
+<button class="button button2">Code</button>
+<button class="button button2">Environments</button>
+</div>
+</div>
+
+<div class="main_video">
+<video autoplay muted controls width="100%" height="100%" style="background-color: transparent;">
+<source src="videos/pen_spin_main_2.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+</div>
+
+</div>
+
+<div class="main_container">
+
+<div class="box" id="abstract">
+<div class="header">Abstract</div>
+<div class="content">Abstract here...
+</div>
+</div>
+
+<div class="box" id="citation">
+<div class="header">Citation</div>
+<div class="content">
+...
+</div>
+</div>
+
+</div>
+
+
+<div class="second_container">
+
+<div class="box" id="results">
+<div class="header">Results</div>
+<div class="results_bar">
+<button class="results_bar_item" onclick="changeResults(event, 'handblock')" style="background-color: #4d99f0;">HandManipulateBlock</button>
+<button class="results_bar_item" onclick="changeResults(event, 'handpen')">HandManipulatePen</button>
+<button class="results_bar_item">EggHandOver</button>
+<button class="results_bar_item">BlockHandOver</button>
+<button class="results_bar_item">PenHandOver</button>
+<button class="results_bar_item">EggCatchUnderarm</button>
+<button class="results_bar_item">EggCatchOverarm</button>
+<button class="results_bar_item">TwoEggCatchUnderarm</button>
+<button class="results_bar_item">PenSpin</button>
+</div>
+
+<div id="handblock" class="result_container">
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handblock_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handblock_mppi_1.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handblock_mppi_20.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+<br/>
+<center><img src="images/handblock_res.png" class="res_image"/></center>
+</div>
+
+
+<div id="handpen" class="result_container" style="display: none;">
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handpen_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handpen_mppi_1.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handpen_mppi_20.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+<br/>
+<center><img src="images/handpen_res.png" class="res_image"/></center>
+</div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
