@@ -35,8 +35,7 @@ function changeResults(evt, env_id) {
 Solving Complex Dexterous Manipulation Tasks With Trajectory Optimisation and Reinforcement Learning
 <br/><br/>
 <div class="authors">
-Henry Charlesworth and Giovanni Montana
-<br/><br/>
+Authors anonymised whilst under review<br/><br/>
 <button class="button button2">Paper (arXiv)</button>
 <button class="button button2">Code</button>
 <button class="button button2">Environments</button>
@@ -56,14 +55,14 @@ Browser doesn't support video tag
 
 <div class="box" id="abstract">
 <div class="header">Abstract</div>
-<div class="content">Abstract here...
+<div class="content">Training agents to autonomously learn how to use anthropomorphic robotic hands has the potential to lead to systems capable of performing a multitude of complex manipulation tasks in unstructured and uncertain environments. In this work, we first introduce a suite of challenging simulated manipulation tasks that current reinforcement learning and trajectory optimisation techniques struggle with. These include environments where two simulated hands have to pass or throw objects between each other, as well as an environment where the agent must learn to spin a long pen between its fingers. We then introduce a simple trajectory optimisation that performs significantly better than existing methods on these environments. Finally, on the challenging PenSpin environment we combine sub-optimal demonstrations generated through trajectory optimisation with off-policy reinforcement learning, obtaining performance that far exceeds either of these approaches individually and effectively solves the environment.
 </div>
 </div>
 
 <div class="box" id="citation">
 <div class="header">Citation</div>
 <div class="content">
-...
+Under review
 </div>
 </div>
 
@@ -77,16 +76,17 @@ Browser doesn't support video tag
 <div class="results_bar">
 <button class="results_bar_item" onclick="changeResults(event, 'handblock')" style="background-color: #4d99f0;">HandManipulateBlock</button>
 <button class="results_bar_item" onclick="changeResults(event, 'handpen')">HandManipulatePen</button>
-<button class="results_bar_item">EggHandOver</button>
-<button class="results_bar_item">BlockHandOver</button>
-<button class="results_bar_item">PenHandOver</button>
-<button class="results_bar_item">EggCatchUnderarm</button>
-<button class="results_bar_item">EggCatchOverarm</button>
-<button class="results_bar_item">TwoEggCatchUnderarm</button>
+<button class="results_bar_item" onclick="changeResults(event, 'egghandover')">EggHandOver</button>
+<button class="results_bar_item" onclick="changeResults(event, 'blockhandover')">BlockHandOver</button>
+<button class="results_bar_item" onclick="changeResults(event, 'penhandover')">PenHandOver</button>
+<button class="results_bar_item" onclick="changeResults(event, 'eggcatchunderarm')">EggCatchUnderarm</button>
+<button class="results_bar_item" onclick="changeResults(event, 'eggcatchoverarm')">EggCatchOverarm</button>
+<button class="results_bar_item" onclick="changeResults(event, 'twoeggcatch')">TwoEggCatchUnderarm</button>
 <button class="results_bar_item">PenSpin</button>
 </div>
 
 <div id="handblock" class="result_container">
+<center>
 <video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
 <source src="videos/handblock_topdm.webm" type="video/webm">
 Browser doesn't support video tag
@@ -101,6 +101,19 @@ Browser doesn't support video tag
 <source src="videos/handblock_mppi_20.webm" type="video/webm">
 Browser doesn't support video tag
 </video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handblock_her_original.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handblock_her_improved.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+</center>
+
+
 <br/>
 <center><img src="images/handblock_res.png" class="res_image"/></center>
 </div>
@@ -121,8 +134,104 @@ Browser doesn't support video tag
 <source src="videos/handpen_mppi_20.webm" type="video/webm">
 Browser doesn't support video tag
 </video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handpen_her_original.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="392" height="252" style="background-color: transparent;" class="result_vid">
+<source src="videos/handpen_her_improved.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
 <br/>
 <center><img src="images/handpen_res.png" class="res_image"/></center>
+</div>
+
+
+<div id="egghandover" class="result_container" style="display: none;">
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/egghandover_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/egghandover_mppi.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<br/>
+</div>
+
+<div id="blockhandover" class="result_container" style="display: none;">
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/blockhandover_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/blockhandover_mppi.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<br/>
+</div>
+
+<div id="penhandover" class="result_container" style="display: none;">
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/penhandover_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/penhandover_mppi.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<br/>
+</div>
+
+<div id="eggcatchunderarm" class="result_container" style="display: none;">
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/eggcatchunderarm_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/eggcatchunderarm_mppi.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<br/>
+</div>
+
+<div id="eggcatchoverarm" class="result_container" style="display: none;">
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/eggcatchoverarm_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/eggcatchoverarm_mppi.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<br/>
+</div>
+
+<div id="twoeggcatch" class="result_container" style="display: none;">
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/twoeggcatch_topdm.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<video autoplay muted controls width="490" height="315" style="background-color: transparent;" class="result_vid">
+<source src="videos/twoeggcatch_mppi.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<br/>
 </div>
 
 </div>
