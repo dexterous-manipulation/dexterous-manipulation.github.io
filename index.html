@@ -35,10 +35,10 @@ function changeResults(evt, env_id) {
 Solving Complex Dexterous Manipulation Tasks With Trajectory Optimisation and Reinforcement Learning
 <br/><br/>
 <div class="authors">
-Authors anonymised whilst under review<br/><br/>
-<button class="button button2">Paper (arXiv)</button>
-<button class="button button2">Code</button>
-<button class="button button2">Environments</button>
+Henry Charlesworth and Giovanni Montana, ICML 2021<br/><br/>
+<a href="https://arxiv.org/abs/2009.05104"><button class="button button2">Paper (arXiv)</button></a>
+<a href="https://github.com/henrycharlesworth/SCDM"><button class="button button2">Code</button></a>
+<a href="https://github.com/henrycharlesworth/dexterous-gym"><button class="button button2">Environments</button></a>
 </div>
 </div>
 
@@ -62,7 +62,7 @@ Browser doesn't support video tag
 <div class="box" id="citation">
 <div class="header">Citation</div>
 <div class="content">
-Under review
+Use arXiv version for now, but accepted at ICML 2021
 </div>
 </div>
 
@@ -83,6 +83,7 @@ Under review
 <button class="results_bar_item" onclick="changeResults(event, 'eggcatchoverarm')">EggCatchOverarm</button>
 <button class="results_bar_item" onclick="changeResults(event, 'twoeggcatch')">TwoEggCatchUnderarm</button>
 <button class="results_bar_item" onclick="changeResults(event, 'penspin')">PenSpin</button>
+<button class="results_bar_item" onclick="changeResults(event, 'humanoid')">Humanoid-v3</button>
 </div>
 
 <div id="handblock" class="result_container">
@@ -309,6 +310,19 @@ Browser doesn't support video tag
 
 <br/>
 </div>
+
+
+<div id="humanoid" class="result_container" style="display: none;">
+Applying TOPDM to a non-dexterous environment (Humanoid-v3). PPO and SAC baselines evaluated after 10 million steps.<br/><br/>
+<center>
+<video autoplay muted controls width="700" height="500" style="background-color: transparent;" class="result_vid">
+<source src="videos/TOPDM_humanoid_15k.webm" type="video/webm">
+Browser doesn't support video tag
+</video>
+
+<img src="images/humanoid_results.png" class="res_image"/>
+
+</center>
 
 </div>
 
